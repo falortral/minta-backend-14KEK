@@ -1,19 +1,22 @@
 {
-    "compilerOptions": {
-      "sourceMap": true,
-      "strict": true,
-      "target": "es2017",
-      "outDir": "./dist",
-      "baseUrl": "./src",
-      "moduleResolution": "Node",
-      "module": "CommonJS",
-      "esModuleInterop": true,
-      "types": ["node", "express"]
-    },
-    "include": [
-      "src/**/*.ts"
-    ],
-    "exclude": [
-      "node_modules"
+  "compilerOptions": {
+    "sourceMap": true,
+    "strict": true,
+    "target": "es2017",
+    "outDir": "./dist",
+    "baseUrl": "./src",
+    "moduleResolution": "Node",
+    "module": "CommonJS",
+    "esModuleInterop": true,
+    "types": [
+      "node",
+      "express"
     ]
-  }
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

@@ -1,18 +1,6 @@
-import exp from 'constants';
-import express, {Request, Response, NextFunction} from 'express';
- 
-const app = express();
+import App from "./app";
+import PostsController from "./posts/posts.controller";
 
-function loggerMiddleware(request: Request, response: Response, next: NextFunction): void {
-  console.log(`${request.method} ${request.path} ${request.ip}`);
-  next();
-}
+const app = new App([new PostsController()]);
 
-app.use(express.json());  // body parser -> request body eléréséhez
-app.use(loggerMiddleware);
- 
-app.get('/', (req: Request, res: Response) => {
-  res.send(req.body);
-});
- 
-app.listen(5000);
+app.listen();
